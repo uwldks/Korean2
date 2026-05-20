@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인간은 쓸모로 판단될 수 있는가?</title>
+  <link rel="stylesheet" href="style.css">
+  <!--
+    폰트: Noto Serif KR (Google Fonts · 한글 세리프)
+          Cormorant Garamond (Google Fonts · 영문 장식)
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <nav class="nav-dots" id="navDots">
+    <a href="#cover"      class="dot active" data-label="표지"></a>
+    <a href="#works"      class="dot"        data-label="작품 소개"></a>
+    <a href="#anim"       class="dot"        data-label="개념 시각화"></a>
+    <a href="#common"     class="dot"        data-label="공통점"></a>
+    <a href="#diff"       class="dot"        data-label="차이점"></a>
+    <a href="#conclusion" class="dot"        data-label="결론"></a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       01  표지  (어두운 따뜻한 배경)
+  ════════════════════════════════════════════════ -->
+  <section class="slide slide-dark" id="cover">
+    <!-- 배경 파티클 (JS로 생성) -->
+    <div class="particles-bg" id="particlesBg"></div>
+
+    <div class="cover-wrap fade-cover">
+      <p class="cover-eye">고등학교 국어 · 상호텍스트적 독서</p>
+      <div class="cover-line"></div>
+
+      <h1 class="cover-h1">
+        인간은 쓸모로<br>판단될 수 있는가?
+      </h1>
+      <p class="cover-sub">
+        &lt;변신&gt; × &lt;감시 자본주의 시대&gt;<br>
+        AI 시대 인간 소외
+      </p>
+      <div class="cover-authors">
+        <span>Franz Kafka · 1915</span>
+        <span class="dot-sep">·</span>
+        <span>Shoshana Zuboff · 2019</span>
+      </div>
+      <div class="scroll-cue">
+        <span>scroll</span>
+        <div class="scroll-stem"></div>
+      </div>
+    </div>
+
+    <!-- 배경 장식 워터마크 -->
+    <div class="watermark" aria-hidden="true">K.</div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       02  작품 소개  (밝은 크림 배경 – 가독성 ↑)
+  ════════════════════════════════════════════════ -->
+  <section class="slide slide-light" id="works">
+    <header class="sec-head fade-up">
+      <span class="sec-label">01 · 작품 소개</span>
+    </header>
+
+    <div class="works-split">
+
+      <!-- ── 변신 패널 ── -->
+      <div class="work-panel fade-up delay-1">
+
+        <!-- 🪲 벌레 만화 애니메이션 -->
+        <div class="anim-box">
+          <svg class="beetle-svg" viewBox="0 0 180 170" xmlns="http://www.w3.org/2000/svg" aria-label="벌레 애니메이션">
+            <g class="beetle-all">
+              <!-- 날개/등딱지 -->
+              <ellipse class="b-shell" cx="90" cy="112" rx="44" ry="30" fill="#3A2E2A" stroke="#D8C7A1" stroke-width="2"/>
+              <!-- 날개 가운데 선 -->
+              <line x1="90" y1="84" x2="90" y2="140" stroke="#D8C7A1" stroke-width="1.5"/>
+              <!-- 가슴(흉부) -->
+              <ellipse cx="90" cy="86" rx="26" ry="16" fill="#3A2E2A" stroke="#D8C7A1" stroke-width="2"/>
+              <!-- 머리 -->
+              <circle cx="90" cy="66" r="16" fill="#3A2E2A" stroke="#D8C7A1" stroke-width="2"/>
+              <!-- 눈 -->
+              <circle cx="82" cy="63" r="5.5" fill="#D8C7A1"/>
+              <circle cx="98" cy="63" r="5.5" fill="#D8C7A1"/>
+              <circle cx="83" cy="63" r="2.5" fill="#1A1A1A"/>
+              <circle cx="99" cy="63" r="2.5" fill="#1A1A1A"/>
+              <!-- 더듬이 -->
+              <path d="M83,52 Q72,38 62,28" stroke="#3A2E2A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M97,52 Q108,38 118,28" stroke="#3A2E2A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="62" cy="28" r="3.5" fill="#3A2E2A"/>
+              <circle cx="118" cy="28" r="3.5" fill="#3A2E2A"/>
+              <!-- 왼쪽 다리 (3개) -->
+              <g class="legs-left">
+                <line x1="50" y1="92"  x2="18"  y2="78"  stroke="#3A2E2A" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="48" y1="108" x2="12"  y2="108" stroke="#3A2E2A" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="50" y1="124" x2="18"  y2="140" stroke="#3A2E2A" stroke-width="3.5" stroke-linecap="round"/>
+              </g>
+              <!-- 오른쪽 다리 (3개) -->
+              <g class="legs-right">
+                <line x1="130" y1="92"  x2="162" y2="78"  stroke="#3A2E2A" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="132" y1="108" x2="168" y2="108" stroke="#3A2E2A" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="130" y1="124" x2="162" y2="140" stroke="#3A2E2A" stroke-width="3.5" stroke-linecap="round"/>
+              </g>
+            </g>
+          </svg>
+          <!-- 바닥 그림자 -->
+          <div class="shadow-ellipse"></div>
+        </div>
+
+        <div class="work-info">
+          <div class="genre-badge">소설 · 1915</div>
+          <h3 class="work-title">변신</h3>
+          <p class="work-author">Franz Kafka</p>
+          <ul class="work-pts">
+            <li>가장 → 어느 날 아침 벌레로 변신</li>
+            <li>노동 능력 상실 → 가족에게 짐</li>
+            <li>소통 단절 → 고독 → 죽음</li>
+          </ul>
+          <p class="work-key">핵심 → <strong>인간 가치 = 생산성?</strong></p>
+        </div>
+      </div>
+
+      <!-- 구분선 -->
+      <div class="works-divider" aria-hidden="true"></div>
+
+      <!-- ── 감시 자본주의 패널 ── -->
+      <div class="work-panel fade-up delay-2">
+
+        <!-- 👁 눈 만화 애니메이션 -->
+        <div class="anim-box">
+          <svg class="eye-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="감시 눈 애니메이션">
+            <!-- 눈 흰자 -->
+            <path class="eye-white" d="M12,70 Q110,8 208,70 Q110,132 12,70 Z" fill="#F5ECD8"/>
+            <!-- 홍채 -->
+            <circle class="eye-iris" cx="110" cy="70" r="36" fill="#6B2D2D"/>
+            <!-- 동공 -->
+            <circle class="eye-pupil" cx="110" cy="70" r="20" fill="#1A1A1A"/>
+            <!-- 반사광 -->
+            <circle cx="122" cy="58" r="7" fill="white" opacity="0.75"/>
+            <!-- 눈테 -->
+            <path d="M12,70 Q110,8 208,70 Q110,132 12,70 Z" fill="none" stroke="#2A1A0A" stroke-width="3.5"/>
+            <!-- 스캔 라인 (CSS로 애니메이션) -->
+            <line class="scan-line" x1="28" y1="70" x2="192" y2="70" stroke="#6B2D2D" stroke-width="2.5" opacity="0.7"/>
+            <!-- 눈썹 (위 꺼풀, CSS 애니메이션) -->
+            <path class="eye-top-lid" d="M12,70 Q110,8 208,70" fill="#2A1A0A"/>
+          </svg>
+
+          <!-- 데이터 점들 (JS 생성) -->
+          <div class="data-dots" id="dataDots"></div>
+        </div>
+
+        <div class="work-info">
+          <div class="genre-badge">인문 비평서 · 2019</div>
+          <h3 class="work-title">감시 자본주의 시대</h3>
+          <p class="work-author">Shoshana Zuboff</p>
+          <ul class="work-pts">
+            <li>우리의 일상 · 감정 → 데이터 원재료</li>
+            <li>기업이 추출 → 시장에서 거래</li>
+            <li>편리함으로 행동을 조종</li>
+          </ul>
+          <p class="work-key">핵심 → <strong>인간 = 예측 상품?</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       03  개념 만화 애니메이션 (핵심 시각화)
+  ════════════════════════════════════════════════ -->
+  <section class="slide slide-dark" id="anim">
+    <header class="sec-head fade-up">
+      <span class="sec-label sec-label-light">02 · 핵심 개념 시각화</span>
+      <h2 class="sec-title-light">같은 구조, 다른 시대</h2>
+    </header>
+
+    <div class="twin-anim-wrap fade-up delay-1">
+
+      <!-- ── 왼쪽: 그레고르 변신 장면 ── -->
+      <div class="anim-scene">
+        <div class="scene-label">《변신》의 세계</div>
+
+        <div class="transform-stage">
+          <!-- 인간 실루엣 -->
+          <svg class="human-svg" viewBox="0 0 120 200" aria-label="인간 실루엣">
+            <circle cx="60" cy="30"  r="22" fill="#D8C7A1"/>
+            <rect   x="38" y="54"  width="44" height="70" rx="8" fill="#D8C7A1"/>
+            <rect   x="20" y="58"  width="18" height="50" rx="6" fill="#D8C7A1"/>
+            <rect   x="82" y="58"  width="18" height="50" rx="6" fill="#D8C7A1"/>
+            <rect   x="40" y="122" width="18" height="65" rx="6" fill="#D8C7A1"/>
+            <rect   x="62" y="122" width="18" height="65" rx="6" fill="#D8C7A1"/>
+          </svg>
+
+          <!-- 변신 화살표 -->
+          <div class="transform-arrow" aria-hidden="true">→</div>
+
+          <!-- 벌레 실루엣 (작은 버전) -->
+          <svg class="bug-small-svg" viewBox="0 0 140 120" aria-label="벌레 실루엣">
+            <ellipse cx="70" cy="72" rx="40" ry="26" fill="#6B2D2D"/>
+            <ellipse cx="70" cy="52" rx="22" ry="14" fill="#6B2D2D"/>
+            <circle  cx="70" cy="34" r="14" fill="#6B2D2D"/>
+            <line x1="34" y1="62" x2="8"   y2="50" stroke="#6B2D2D" stroke-width="4" stroke-linecap="round"/>
+            <line x1="32" y1="74" x2="4"   y2="74" stroke="#6B2D2D" stroke-width="4" stroke-linecap="round"/>
+            <line x1="34" y1="86" x2="8"   y2="98" stroke="#6B2D2D" stroke-width="4" stroke-linecap="round"/>
+            <line x1="106" y1="62" x2="132" y2="50" stroke="#6B2D2D" stroke-width="4" stroke-linecap="round"/>
+            <line x1="108" y1="74" x2="136" y2="74" stroke="#6B2D2D" stroke-width="4" stroke-linecap="round"/>
+            <line x1="106" y1="86" x2="132" y2="98" stroke="#6B2D2D" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- 가족 거부 애니메이션 -->
+        <div class="family-row">
+          <div class="family-fig f1" title="아버지">👴</div>
+          <div class="family-fig f2" title="어머니">👩</div>
+          <div class="family-fig f3" title="여동생">👧</div>
+        </div>
+        <p class="scene-caption">노동 능력 상실 → 가족에게 버려짐</p>
+      </div>
+
+      <!-- 가운데 등호 -->
+      <div class="equals-sign fade-up delay-2" aria-hidden="true">
+        <div class="eq-top">=</div>
+        <div class="eq-sub">같은 구조</div>
+      </div>
+
+      <!-- ── 오른쪽: 감시 자본주의 장면 ── -->
+      <div class="anim-scene">
+        <div class="scene-label">《감시 자본주의 시대》의 세계</div>
+
+        <div class="data-stage">
+          <!-- 스마트폰 -->
+          <div class="phone-shape">
+            <div class="phone-screen">📱</div>
+          </div>
+          <!-- 데이터 점들이 눈으로 날아감 (CSS 애니메이션) -->
+          <div class="data-stream">
+            <span class="d-dot d1">📍</span>
+            <span class="d-dot d2">💬</span>
+            <span class="d-dot d3">❤️</span>
+            <span class="d-dot d4">🔍</span>
+            <span class="d-dot d5">📊</span>
+          </div>
+          <!-- 서버/기업 아이콘 -->
+          <div class="corp-box">
+            <div class="corp-eye">👁</div>
+            <div class="corp-label">빅테크 기업</div>
+          </div>
+        </div>
+
+        <p class="scene-caption">데이터 생산 → 기업에 착취됨</p>
+      </div>
+
+    </div>
+
+    <!-- 공통 결론 -->
+    <div class="anim-conclusion fade-up delay-2">
+      <blockquote>
+        "인간이 <em>수단</em>으로 전락하는 구조 — 시대를 초월한 문제"
+      </blockquote>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       04  공통점 (밝은 배경)
+  ════════════════════════════════════════════════ -->
+  <section class="slide slide-light" id="common">
+    <header class="sec-head fade-up">
+      <span class="sec-label">03 · 공통점 분석</span>
+    </header>
+
+    <!-- 중앙 비주얼 다이어그램 -->
+    <div class="venn-wrap fade-up delay-1">
+      <div class="venn-circle vc-left">
+        <span class="vc-label">변신</span>
+        <span class="vc-icon">🪲</span>
+      </div>
+      <div class="venn-overlap">
+        <div class="overlap-items">
+          <div class="ov-item">인간의<br><strong>도구화</strong></div>
+          <div class="ov-item">시스템 속<br><strong>소외</strong></div>
+          <div class="ov-item">생산성<br><strong>중심 사회</strong></div>
+        </div>
+      </div>
+      <div class="venn-circle vc-right">
+        <span class="vc-label">감시 자본주의</span>
+        <span class="vc-icon">👁</span>
+      </div>
+    </div>
+
+    <!-- 4개 공통 카드 -->
+    <div class="common-grid fade-up delay-2">
+      <div class="c-card">
+        <div class="c-icon">⚙️</div>
+        <h4>인간의 도구화</h4>
+        <p>생계 도구 / 데이터 도구</p>
+      </div>
+      <div class="c-card">
+        <div class="c-icon">📊</div>
+        <h4>생산성 우선</h4>
+        <p>가치 = 생산량 / 데이터량</p>
+      </div>
+      <div class="c-card">
+        <div class="c-icon">🕸</div>
+        <h4>시스템 속 소외</h4>
+        <p>가족 공동체 / 디지털 플랫폼</p>
+      </div>
+      <div class="c-card">
+        <div class="c-icon">🔗</div>
+        <h4>자율성 상실</h4>
+        <p>감당 못 할 짐 / 예측 상품화</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       05  차이점 – 비주얼 비교표
+  ════════════════════════════════════════════════ -->
+  <section class="slide slide-dark" id="diff">
+    <header class="sec-head fade-up">
+      <span class="sec-label sec-label-light">04 · 차이점 분석</span>
+    </header>
+
+    <div class="diff-visual fade-up delay-1">
+
+      <!-- 왼쪽 컬럼: 변신 -->
+      <div class="dv-col dv-left">
+        <div class="dv-book-tag">🪲 변신</div>
+        <div class="dv-row">
+          <span class="dv-icon">📖</span>
+          <span class="dv-text">소설 (허구적 서사)</span>
+        </div>
+        <div class="dv-row">
+          <span class="dv-icon">❤️</span>
+          <span class="dv-text">감정으로 체험</span>
+        </div>
+        <div class="dv-row">
+          <span class="dv-icon">🔮</span>
+          <span class="dv-text">벌레 = 메타포</span>
+        </div>
+        <div class="dv-row">
+          <span class="dv-icon">💀</span>
+          <span class="dv-text">운명에 순응 → 죽음</span>
+        </div>
+      </div>
+
+      <!-- 가운데 vs -->
+      <div class="dv-vs" aria-hidden="true">VS</div>
+
+      <!-- 오른쪽 컬럼: 감시 자본주의 -->
+      <div class="dv-col dv-right">
+        <div class="dv-book-tag">👁 감시 자본주의 시대</div>
+        <div class="dv-row">
+          <span class="dv-icon">🔬</span>
+          <span class="dv-text">인문 비평서 (논증)</span>
+        </div>
+        <div class="dv-row">
+          <span class="dv-icon">🧠</span>
+          <span class="dv-text">이성으로 분석</span>
+        </div>
+        <div class="dv-row">
+          <span class="dv-icon">📡</span>
+          <span class="dv-text">실제 사회 구조 해부</span>
+        </div>
+        <div class="dv-row">
+          <span class="dv-icon">✊</span>
+          <span class="dv-text">저항 촉구 → 투쟁</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 보완 관계 설명 -->
+    <div class="diff-note fade-up delay-2">
+      <p>소설은 <em>감정</em>으로 · 비평서는 <em>이성</em>으로 — 두 렌즈가 함께할 때 전모가 드러난다</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       06  결론
+  ════════════════════════════════════════════════ -->
+  <section class="slide slide-conclusion" id="conclusion">
+    <div class="conc-wrap fade-up">
+
+      <span class="sec-label sec-label-light">05 · 결론</span>
+      <div class="conc-rule"></div>
+
+      <h2 class="conc-h2">
+        인간은 단순한 생산성과<br>데이터로 환원될 수 없다.
+      </h2>
+
+      <!-- 3가지 결론 포인트 (아이콘 + 한 줄) -->
+      <div class="conc-points">
+        <div class="conc-pt">
+          <span class="conc-icon">📢</span>
+          <p>그레고르의 비극 — <em>현재 진행형</em>의 경고</p>
+        </div>
+        <div class="conc-pt">
+          <span class="conc-icon">🌱</span>
+          <p>기술 발전할수록 <em>인간 중심 가치</em>가 더 중요</p>
+        </div>
+        <div class="conc-pt">
+          <span class="conc-icon">🤝</span>
+          <p>서로 이해하고 신뢰하는 <em>인본주의</em>가 필요</p>
+        </div>
+      </div>
+
+      <!-- 마지막 인용 -->
+      <div class="final-quote-box">
+        <blockquote class="final-quote">
+          "우리는 인간이다.<br>그것으로 충분하다."
+        </blockquote>
+      </div>
+
+      <p class="conc-footer">
+        Franz Kafka &lt;변신&gt; &nbsp;×&nbsp; Shoshana Zuboff &lt;감시 자본주의 시대&gt;
+      </p>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
